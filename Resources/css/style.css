@@ -199,7 +199,8 @@ p {
 }
 
 .container{
-  background-color: #a1b3be;
+  background-color: #111;
+  margin: auto;
 }
 
 /*------ Header Showcase ------*/
@@ -208,38 +209,40 @@ p {
   background-color: rgb(228, 135, 228);
   height: 500px;
   width: 600px;
-  background: url("Resources/images/banner-image.png");
+  background: url("Resources/images/");
   object-fit: cover;
-  z-index: 4;
+  margin-left: 50px;
+ 
 }
 
 .red img {
   height: 500px;
+  z-index: 10;
 }
 
 .yellow {
+  margin: 0 auto;
   z-index: 0;
   display: flex;
   flex-direction: column;
-  background-color: rgb(235, 233, 232);
   height: 400px;
   width: 550px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
+  /*background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);*/
 }
 
 #showcase {
-  max-width: 1250px;
+  
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  min-height: 85vh;
+  min-height: 90vh;
   color: #fff;
   text-align: center;
 }
