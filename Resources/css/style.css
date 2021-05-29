@@ -205,22 +205,24 @@ p {
 
 /*------ Header Showcase ------*/
 
-.red {
+.box1 {
   background-color: rgb(228, 135, 228);
-  height: 500px;
-  width: 600px;
+  height: 400px;
+  max-width: 500px;
   background: url("Resources/images/");
   object-fit: cover;
-  margin-left: 50px;
- 
+  justify-content: center;
+  align-items: center;
+/* grid-template-areas: box1;*/
 }
 
-.red img {
-  height: 500px;
+.box1 img {
+  height: 400px;
   z-index: 10;
 }
 
-.yellow {
+.box2 {
+  /*grid-template-areas: box2;*/
   margin: 0 auto;
   z-index: 0;
   display: flex;
@@ -229,6 +231,7 @@ p {
   width: 550px;
   border-radius: 15px;
   overflow: hidden;
+  margin-right: 100px;
   /*background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -236,10 +239,12 @@ p {
 }
 
 #showcase {
-  
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /*grid-template-areas: 
+  "box1 box2";*/
+
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   min-height: 90vh;

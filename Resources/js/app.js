@@ -12,5 +12,5 @@ menuClose.addEventListener("click", () => {
 });
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-tl.from(".red", {x: "50%", duration: 1.8,  delay:1.2 });
-tl.from(".yellow", {opacity:"0",x: "-30%", delay:1.2, duration:"1.7"}, {opacity:"1", x: "0%", duration:2});
+tl.from(".box1", {x: "50%", duration: 1.8,  delay:1.2 });
+tl.from(".box2", {opacity:"0",x: "-30%", delay:1.2, duration:"1.7"}, {opacity:"1", x: "0%", duration:2});
