@@ -12,7 +12,7 @@ menuClose.addEventListener("click", () => {
 });
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-tl.from(".box1", {x: "50%", delay:"1.2", duration: "1.8"});
+tl.from(".box1", {x: "70%", delay:"1.2", duration: "1.8"});
 tl.from(".box2", {opacity:"0",x: "-50%", delay:"1.2",duration:"1.8"}, {opacity:"1", x: "0%"});
 tl.from(".fab", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opacity:"1", x: "0%"});
 
