@@ -46,7 +46,7 @@ h2 {
   font-size: 24px;
 }
 p {
-  font-size: 24px;
+  font-size: 18px;
   margin: 0;
   padding: 15px 0;
 }
@@ -80,7 +80,7 @@ p {
 }
 
 .container {
-  margin: 30px 100px;
+  margin: 0rem 2rem;
 }
 
 /*--------------- Navigation ---------------*/
@@ -164,7 +164,7 @@ nav {
 }
 
 .overlayactive {
-  width: 65%;
+  width: 100%;
 }
 
 .overlaycontent {
@@ -240,7 +240,7 @@ nav {
 }
 .head-section,
 .about-section,
-.projects-section {
+.project-wrapper {
   color: #000;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   background: #fff;
@@ -254,7 +254,8 @@ nav {
 .project-wrapper {
   place-items: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /*grid-template-columns: 45vw 45vw;*/
 }
 
 /*---------- Header Showcase ----------*/
@@ -281,8 +282,8 @@ nav {
 .social-media ul {
   position: absolute;
   display: flex;
-  left: 0;
-  top: 50%;
+  left: 2%;
+  top: 40%;
   flex-direction: column;
   justify-content: center;
 }
@@ -351,10 +352,16 @@ nav {
 .projects-section {
   display: flex;
   flex-direction: column;
+  
 }
 
-.projects-section h1, h2{
+.projects-section h1, .projects-section h2{
   text-align: center;
+  margin: 50px 0;
+}
+
+.project-wrapper{
+  padding: 100px 50px;
 }
 .project-img img {
   width: 350px;
@@ -363,6 +370,7 @@ nav {
 }
 
 .project-txt {
+  margin-right: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -370,7 +378,7 @@ nav {
 }
 
 .description {
-  padding: 7%;
+  padding: 2% 0;
   margin: 0 auto;
   text-align: left;
 }
@@ -409,7 +417,17 @@ justify-content: space-between;
     display: initial;
   }
 
+  .description p{
+ text-align: center;
+  }
 
+  .project-txt {
+    margin-right: 0;
+  }
+
+  .container {
+  padding: 20px 30px ;
+}
 }
 
 @media screen and (max-height: 450px) {
@@ -435,6 +453,9 @@ justify-content: space-between;
   }
 }
 
+
+/*
+
 .border{
   border-bottom: solid 5px rgba(102, 102, 102, 0.384);
   width: 1153px;
@@ -442,4 +463,4 @@ justify-content: space-between;
   padding: 30px 0;
   margin: 0 auto;
   
-}
+}*/

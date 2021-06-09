@@ -17,3 +17,15 @@ tl.from(".box2", {opacity:"0",x: "-50%", delay:"1.2",duration:"1.8"}, {opacity:"
 tl.from(".fab", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opacity:"1", x: "0%"});
 
 
+/*====== SCROLL REVEAL SECTION ======*/
+const sr = ScrollReveal({
+  duration: 2000,
+  reset: true
+});
+
+
+/*Imgs*/
+sr.reveal('.project-img',{origin: 'left',distance: '100px',delay: 300}); 
+
+/*Data*/
+sr.reveal('.project-txt',{origin: 'left',distance: '150px',delay: 500}); 
