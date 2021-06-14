@@ -18,14 +18,26 @@ tl.from(".fab", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opaci
 
 
 /*====== SCROLL REVEAL SECTION ======*/
-const sr = ScrollReveal({
+
+/*====== Project Section ======*/
+const sreveal = ScrollReveal({
   duration: 2000,
-  reset: true
+  origin: 'left',
+  reset: false
 });
 
-
 /*Imgs*/
-sr.reveal('.project-img',{origin: 'left',distance: '100px',delay: 300}); 
+sreveal.reveal('.project-img',{distance: '100px',delay: 300}); 
 
 /*Data*/
-sr.reveal('.project-txt',{origin: 'left',distance: '150px',delay: 500}); 
+sreveal.reveal('.project-txt',{distance: '150px',delay: 500}); 
+
+
+/*====== Service Section ======*/
+var slideUp = {
+  distance: '100%',
+  origin: 'bottom',
+delay: 200
+};
+ScrollReveal().reveal('.serviceBox',  slideUp);
+ScrollReveal().reveal('.serviceBox', { interval: 300 });

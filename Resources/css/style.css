@@ -4,12 +4,6 @@
   padding: 0;
 }
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
 html {
   /*font-size: 62.5%;*/
   scroll-behavior: smooth;
@@ -94,13 +88,14 @@ p {
 .title {
   text-align: center;
   position: relative;
-  margin: 0 auto 2rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .title::after {
   content: "";
   background: #2372ea;
-  width: 280px;
+  width: 300px;
   height: 5px;
   border-radius: 25px;
   position: absolute;
@@ -128,19 +123,17 @@ p {
 }
 .head-section,
 .about-section,
-.project-wrapper {
+.project-wrapper,
+.serviceBox {
   color: #000;
   background: linear-gradient(
     130deg,
     rgba(251, 251, 254, 0.6),
     rgba(251, 251, 254, 0.2)
   );
-  box-shadow: inset 2px 2px 1px rgba(251, 251, 254, 0.3) inset -2px -2px 1px
-    rgba(251, 251, 254, 0.2);
   border-radius: 1.5rem;
   backdrop-filter: blur(10px);
-  border-radius: 15px;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   padding: 50px 0;
 }
 
@@ -370,14 +363,13 @@ nav {
   place-items: center;
 }
 
-.projects-section h1,
 .projects-section h2 {
   text-align: center;
-  margin: 50px 0;
+  margin: 15px 0;
 }
 
 .project-wrapper {
-  padding: 80px auto;
+  padding: 50px auto;
 }
 
 .project-img img {
@@ -447,6 +439,8 @@ nav {
   .social-media ul li a {
     font-size: 28px;
   }
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -474,4 +468,153 @@ nav {
   .social-media {
     display: none;
   }
+}
+
+/*---------- Services ----------*/
+.services {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+place-items: center;
+padding: 50px 0;
+}
+
+.serviceBox {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 290px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.serviceBox .service-icon {
+  font-size: 50px;
+  line-height: 80px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  color: #2372ea;
+}
+.serviceBox h3 {
+  color: #000;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin: 0 -20px 15px;
+}
+.serviceBox p {
+  color: #000;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+}
+
+
+/*---------- Call to Action ----------*/
+.hire-me {
+  height: 50vh;
+  display: grid;
+  place-items: center;
+  background-image: url('//MyProjects/PORTFOLIO/Resources/images/work.jpg') no-repeat top center;
+  background-size: cover;
+}
+
+.hire-txt h1 span {
+  -webkit-background-clip: text;
+  color: #0000;
+  background-image: linear-gradient(to top, #008aff, #00ffe7);
+  animation: animate-txt 10s linear infinite;
+}
+
+@keyframes animate-txt {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+
+
+.hire-btn {
+  padding: 1rem 4rem;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.hire-btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-btn 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-btn {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.hire-btn:active {
+  color: #000;
+}
+
+.hire-btn:active:after {
+  background: transparent;
+}
+
+.hire-btn:hover:before {
+  opacity: 1;
+}
+
+.hire-btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
