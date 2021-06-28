@@ -439,8 +439,6 @@ nav {
   .social-media ul li a {
     font-size: 28px;
   }
-
-
 }
 
 @media only screen and (max-width: 500px) {
@@ -472,10 +470,10 @@ nav {
 
 /*---------- Services ----------*/
 .services {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-place-items: center;
-padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  padding: 50px 0;
 }
 
 .serviceBox {
@@ -485,7 +483,6 @@ padding: 50px 0;
   width: 290px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
-
 
 .serviceBox .service-icon {
   font-size: 50px;
@@ -513,13 +510,13 @@ padding: 50px 0;
   margin: 0;
 }
 
-
 /*---------- Call to Action ----------*/
 .hire-me {
   height: 50vh;
   display: grid;
   place-items: center;
-  background-image: url('//MyProjects/PORTFOLIO/Resources/images/work.jpg') no-repeat top center;
+  background-image: url("//MyProjects/PORTFOLIO/Resources/images/work.jpg")
+    no-repeat top center;
   background-size: cover;
 }
 
@@ -539,9 +536,6 @@ padding: 50px 0;
     filter: hue-rotate(360deg);
   }
 }
-
-
-
 
 .hire-btn {
   padding: 1rem 4rem;
