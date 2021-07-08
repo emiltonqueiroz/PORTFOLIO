@@ -12,13 +12,18 @@ menuClose.addEventListener("click", () => {
 });
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-tl.from(".box1", {x: "70%", delay:"1.2", duration: "1.8"});
-tl.from(".box2", {opacity:"0",x: "-50%", delay:"1.2",duration:"1.8"}, {opacity:"1", x: "0%"});
+
+tl.from(".box1", {x: "75%", delay:"1.2", duration: "1.8"});
+
+
+tl.from(".box2", {opacity:"0",x: "-70%", delay:"1.2",duration:"1.8"}, {opacity:"1", x: "0%"});
+
 tl.from(".fab", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opacity:"1", x: "0%"});
-tl.from(".link", {
+
+tl.from(".links", {
   opacity: 0,
-  duration: 1,
-  y: 30,
+  duration: 1 ,
+  y: 10,
   stagger: 0.2,
 });
 
