@@ -11,21 +11,14 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlayactive");
 });
 
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-tl.from(".box1", {x: "75%", delay:"1.2", duration: "1.8"});
+const gs = gsap.timeline({ defaults: { ease: "power1.out" } });
 
+gs.from(".box1", {x: "75%", delay:"1.2", duration: "1.8"});
 
-tl.from(".box2", {opacity:"0",x: "-70%", delay:"1.2",duration:"1.8"}, {opacity:"1", x: "0%"});
+gs.from(".box2", {opacity:"0",x: "-70%", delay:"1.2",duration:"1.8"}, {opacity:"1", x: "0%"});
 
-tl.from(".fab", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opacity:"1", x: "0%"});
-
-tl.from(".links", {
-  opacity: 0,
-  duration: 1 ,
-  y: 10,
-  stagger: 0.2,
-});
+gs.from(".sos", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opacity:"1", x: "0%"});
 
 /*====== SCROLL REVEAL SECTION ======*/
 
