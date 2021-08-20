@@ -278,12 +278,14 @@ img {
 }
 
 .education__content,
-.experience__content {
+.experience__content,
+.project__content {
   display: flex;
 }
 
 .education__time,
-.experience__time {
+.experience__time,
+.project__time {
   padding-right: 1rem;
 }
 
@@ -311,12 +313,14 @@ img {
 }
 
 .education__title,
-.experience__title {
+.experience__title,
+.project__title {
   font-size: var(--h3-font-size);
 }
 
 .education__studies,
-.experience__company {
+.experience__company
+ {
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
@@ -355,25 +359,7 @@ img {
 /*Certificates Section*/
 .certificate__title {
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
-}
-
-/*References Section*/
-.references__content {
-  gap: 0.25rem;
-}
-
-.references__subtitle {
-  color: var(--text-color-light);
-}
-
-.references__subtitle,
-.references__contact {
-  font-size: var(--smaller-font-size);
-}
-
-.references__title {
-  font-size: var(--h3-font-size);
+  margin-top: var(--mb-2);
 }
 
 /*Interests Section*/
@@ -531,6 +517,8 @@ body.dark-theme {
   color: var(--title-color);
 }
 
+
+/*
 body.scale-cv{
   --h1-font-size: .938rem;
   --h2-font-size: .938rem;
@@ -539,3 +527,4 @@ body.scale-cv{
   --small-font-size: 0.75rem;
   --smaller-font-size: 0.688rem;
 }
+*/
