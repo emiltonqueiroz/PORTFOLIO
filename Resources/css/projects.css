@@ -6,12 +6,11 @@
   --white:#fff;
   --black:#000;
   --gray: #999;
-  --overlay:#adc5dc;
-  --hire-bg: #222;
   --transp: linear-gradient(
     130deg,rgba(251, 251, 254, 0.6),rgba(251, 251, 254, 0.2)
   );
-
+  --overlay:#adc5dc;
+  --hire-bg: #222;
 }
 
 

@@ -1,3 +1,4 @@
+/*====== NAVIGATION SECTION ======*/
 const doc = document;
 const menuOpen = doc.querySelector(".burger");
 const menuClose = doc.querySelector(".close");
@@ -11,54 +12,45 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlayactive");
 });
 
-
-const gs = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-gs.from(".sos", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opacity:"1", x: "0%"});
-
+/*====== SCROLL REVEAL SECTION ======*/
 
 /*Box1*/
 const lReveal = ScrollReveal({
-  duration: 2000,
-  origin: 'left',
-  reset: false
+  duration: 2500,
+  origin: "left",
+  reset: false,
 });
 
-lReveal.reveal('.box1',{distance: '150px',delay: 300}); 
-
+lReveal.reveal(".sos", { distance: "120px", delay: 600 });
+lReveal.reveal(".box1", { distance: "300px", delay: 350 });
 
 /*Box2*/
 const rReveal = ScrollReveal({
-  duration: 2000,
-  origin: 'right',
-  reset: false
+  duration: 2500,
+  origin: "right",
+  reset: false,
 });
 
-rReveal.reveal('.box2',{distance: '150px',delay: 300}); 
-
-
-
-/*====== SCROLL REVEAL SECTION ======*/
+rReveal.reveal(".box2", { distance: "300px", delay: 350 });
 
 /*====== Project Section ======*/
 const sreveal = ScrollReveal({
   duration: 2000,
-  origin: 'left',
-  reset: false
+  origin: "left",
+  reset: false,
 });
 
 /*Imgs*/
-sreveal.reveal('.project-img',{distance: '100px',delay: 300}); 
+sreveal.reveal(".project-img", { distance: "100px", delay: 300 });
 
 /*Data*/
-sreveal.reveal('.project-txt',{distance: '150px',delay: 500}); 
-
+sreveal.reveal(".project-txt", { distance: "150px", delay: 500 });
 
 /*====== Service Section ======*/
-var slideUp = {
-  distance: '100%',
-  origin: 'bottom',
-delay: 200
+const slideUp = {
+  distance: "100%",
+  origin: "bottom",
+  delay: 200,
 };
-ScrollReveal().reveal('.serviceBox',  slideUp);
-ScrollReveal().reveal('.serviceBox', { interval: 300 });
+ScrollReveal().reveal(".serviceBox", slideUp);
+ScrollReveal().reveal(".serviceBox", { interval: 300 });
