@@ -1,3 +1,20 @@
+
+:root{
+  --bg : #d1deeb;
+  --blue : #2372ea;
+  --h-blue: #1254b7;
+  --white:#fff;
+  --black:#000;
+  --gray: #999;
+  --transp: linear-gradient(
+    130deg,rgba(251, 251, 254, 0.6),rgba(251, 251, 254, 0.2)
+  );
+  --overlay:#adc5dc;
+  --hire-bg: #222;
+}
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +29,7 @@ body {
   font-size: 1.1em;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  background: #d1deeb;
+  background: var(--bg);
   display: grid;
   place-content: center;
 }
@@ -23,11 +40,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #fff;
+  background: var(--white);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #2372ea;
+  background: var(--blue);
   border-radius: 55px;
 }
 
@@ -66,7 +83,7 @@ p {
 .cta,
 .btn,
 .prj-btn {
-  background: #2372ea;
+  background: var(--blue);
 }
 
 .cta,
@@ -78,8 +95,8 @@ p {
 .cta:hover,
 .btn:hover,
 .prj-btn:hover {
-  background: #1254b7;
-  color: #fff;
+  background: var(--h-blue);
+  color: var(--white);
 }
 
 .container {
@@ -96,7 +113,7 @@ p {
 
 .title::after {
   content: "";
-  background: #2372ea;
+  background: var(--blue);
   width: 300px;
   height: 5px;
   border-radius: 25px;
@@ -114,7 +131,7 @@ p {
 
 .text::after {
   content: "";
-  background: #2372ea;
+  background: var(--blue);
   width: 250px;
   height: 6px;
   border-radius: 25px;
@@ -128,11 +145,7 @@ p {
 .project-wrapper,
 .serviceBox {
   color: #000;
-  background: linear-gradient(
-    130deg,
-    rgba(251, 251, 254, 0.6),
-    rgba(251, 251, 254, 0.2)
-  );
+  background: var(--transp);
   border-radius: 1.5rem;
   backdrop-filter: blur(10px);
   margin-bottom: 50px;
@@ -152,8 +165,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 12%;
-  background-color: #d1deeb;
+  padding: 15px 11%;
 }
 
 .logo {
@@ -166,7 +178,7 @@ nav {
 .overlaycontent a {
   font-family: "poppins", sans-serif;
   font-weight: 600;
-  color: #000;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -177,12 +189,12 @@ nav {
 }
 
 .link {
-  padding: 10px 25px;
+  padding: 10px 30px;
   transition: border-bottom 0.1s;
 }
 
 .link:hover {
-  border-bottom: 3px solid #1669e6;
+  border-bottom: 3px solid var(--blue);
 }
 
 .navlinks li .cta {
@@ -190,19 +202,14 @@ nav {
   padding: 10px 35px;
   border-radius: 25px;
   cursor: pointer;
-  transition: color, background-color 0.4s ease 0s;
-  color: #fff;
-}
-
-.navlinks li:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 /*---------- Mobile Nav ----------*/
 
 .burger {
   display: none;
-  color: #000;
+  color: var(--black);
   display: none;
   font-size: 30px;
   padding: 10px 24px;
@@ -212,7 +219,7 @@ nav {
 }
 
 .burger:hover {
-  color: rgb(107, 107, 107);
+  color: var(--gray);
 }
 
 .overlay {
@@ -222,7 +229,7 @@ nav {
   z-index: 10;
   right: 0;
   top: 0;
-  background-color: #d1deeb;
+  background-color: var(--overlay);
   overflow-x: hidden;
   transition: width 0.4s ease 0s;
 }
@@ -244,26 +251,26 @@ nav {
   font-size: 35px;
   display: block;
   transition: color 0.3s ease 0s;
+color: var(--black);
 }
 
 .overlaycontent a:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .overlay .close {
   position: absolute;
-  top: -10px;
   right: 75px;
   font-size: 60px;
 }
 
 .overlay .close {
   cursor: pointer;
-  color: #000;
+  color: var(--black);
 }
 
 .overlay .close:hover {
-  color: rgb(109, 109, 109);
+  color: var(--gray);
 }
 
 /*---------- Header Showcase ----------*/
@@ -285,7 +292,7 @@ nav {
   z-index: 0;
   display: flex;
   flex-direction: column;
-  color: #000;
+  color: var(--black);
 }
 
 /*---------- Social Media ----------*/
@@ -293,33 +300,33 @@ nav {
   position: absolute;
   display: flex;
   left: 2%;
-  top: 40%;
+  top: 30%;
   flex-direction: column;
   justify-content: center;
 }
 
 .social-media ul li {
   list-style: none;
+  padding: 5px 15px;
   transition: all 0.5s;
 }
 
 .social-media ul li a {
   font-size: 24px;
-  margin-left: 20px;
-  color: #000;
-  margin: 10px 20px;
-  padding: 0 15px;
+  margin-left: 15px;
+  color: var(--black);
+
 }
 
 .social-media ul li:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 /*---------- About Section ----------*/
 .about-section {
   text-align: left;
   min-height: 100vh;
-  background: #fff;
+  background: var(--white);
 }
 
 .about-img {
@@ -332,7 +339,7 @@ nav {
 .about-txt {
   display: flex;
   flex-direction: column;
-  color: #000;
+  color: var(--black);
   margin: 0 80px;
 }
 .about-section img {
@@ -401,7 +408,7 @@ nav {
 
 .prj-btn {
   width: 150px;
-  color: #fff;
+  color: var(--white);
   border-radius: 25px;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
@@ -425,8 +432,8 @@ nav {
     display: initial;
   }
 
-   /*--- Header ---*/
-   .social-media ul {
+  /*--- Header ---*/
+  .social-media ul {
     left: 0;
     top: 20%;
   }
@@ -435,7 +442,7 @@ nav {
     font-size: 28px;
   }
 
- /*---- Projects section ----*/
+  /*---- Projects section ----*/
   .description p {
     text-align: center;
   }
@@ -443,12 +450,10 @@ nav {
   .project-txt {
     margin-right: 0;
   }
-
 }
 
 @media only screen and (max-width: 500px) {
-
-    /*-----NAV-----*/
+  /*-----NAV-----*/
   nav {
     padding: 15px 5%;
   }
@@ -475,7 +480,7 @@ nav {
   }
 
   /*--- footer ---*/
-  .footer{
+  .footer {
     flex-direction: column;
     align-items: center;
   }
@@ -490,11 +495,11 @@ nav {
 }
 
 .serviceBox {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 20px;
   width: 290px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .serviceBox .service-icon {
@@ -504,11 +509,11 @@ nav {
   height: 80px;
   margin: 0 auto 20px;
   border-radius: 20px;
-  box-shadow: 0 0 5px rgb(0, 0, 0);
-  color: #2372ea;
+  box-shadow: 0 0 5px var(--black);
+  color: var(--blue);
 }
 .serviceBox h3 {
-  color: #000;
+  color: var(--black);
   background-color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -517,7 +522,7 @@ nav {
   margin: 0 -20px 15px;
 }
 .serviceBox p {
-  color: #000;
+  color: var(--black);
   font-size: 15px;
   line-height: 22px;
   margin: 0;
@@ -530,8 +535,8 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.849);
-  color: #fff;
+  background: var(--hire-bg);
+  color: var(--white);
 }
 
 .hire-txt {
@@ -560,8 +565,8 @@ nav {
   padding: 1rem 4rem;
   border: none;
   outline: none;
-  color: #000;
-  background: #fff;
+  color: var(--black);
+  background: var(--white);
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -610,7 +615,7 @@ nav {
 }
 
 .hire-btn:active {
-  color: #000;
+  color: var(--black);
 }
 
 .hire-btn:active:after {
@@ -635,36 +640,37 @@ nav {
 
 /*---------- Footer ----------*/
 .footer {
-  background-color: #000;
+  background-color: var(--black);
   display: flex;
   justify-content: space-between;
   padding: 5% 7%;
-  color: #fff;
+  color: var(--white);
 }
 
 .footer-txt p {
   font-size: 14px;
 }
 
-.footer-txt{
-  padding: 75px 20px;
-  color: #555;
+.footer-txt {
+  padding: 50px 25px;
+
+  color: var(--gray);
 }
 
 .footer li {
   list-style: none;
-
 }
 
-.contact li{
+.contact li {
   font-size: 16px;
   padding: 10px 0;
 }
 
 .social a {
+  padding: 0;
   text-decoration: none;
   font-size: 16px;
-  color: #fff;
+  color: var(--white);
 }
 
 .social ul {
@@ -678,5 +684,5 @@ nav {
 }
 
 .social ul li:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }

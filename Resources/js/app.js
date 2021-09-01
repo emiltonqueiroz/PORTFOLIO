@@ -14,11 +14,29 @@ menuClose.addEventListener("click", () => {
 
 const gs = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-gs.from(".box1", {x: "75%", delay:"1.2", duration: "1.8"});
-
-gs.from(".box2", {opacity:"0",x: "-70%", delay:"1.2",duration:"1.8"}, {opacity:"1", x: "0%"});
-
 gs.from(".sos", {opacity:"0", x: "-100%",  delay:"1.2", duration: "1.8"}, {opacity:"1", x: "0%"});
+
+
+/*Box1*/
+const lReveal = ScrollReveal({
+  duration: 2000,
+  origin: 'left',
+  reset: false
+});
+
+lReveal.reveal('.box1',{distance: '150px',delay: 300}); 
+
+
+/*Box2*/
+const rReveal = ScrollReveal({
+  duration: 2000,
+  origin: 'right',
+  reset: false
+});
+
+rReveal.reveal('.box2',{distance: '150px',delay: 300}); 
+
+
 
 /*====== SCROLL REVEAL SECTION ======*/
 
